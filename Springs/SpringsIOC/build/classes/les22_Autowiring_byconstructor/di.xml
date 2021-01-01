@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.-->
+
+<beans 
+    xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    <bean id="engine" class="les22_Autowiring_byconstructor.Engine" autowire-candidate="false">
+        <property name="year" value="2018"/>
+    </bean>
+        <bean id="engine1" class="les22_Autowiring_byconstructor.Engine"  >
+        <property name="year" value="2019"/>
+        </bean>
+        <bean id="t" class="les22_Autowiring_byconstructor.car" autowire="constructor">
+       <constructor-arg value="Lamborgini" index="0"/> 
+         <constructor-arg value="44" index="2"/> 
+        </bean>
+</beans>

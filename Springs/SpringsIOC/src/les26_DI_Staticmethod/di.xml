@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+
+    <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+    <bean id="t" class="les26_DI_Staticmethod.Car"></bean>
+    <bean class=" org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+        <property name="staticMethod" value="les26_DI_Staticmethod.Car.setcarname"/>
+            <property name="arguments">
+                <list>
+                    <value> AUDI</value>
+                </list>
+        </property>
+    </bean>
+        <bean class=" org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+        <property name="staticMethod" value="les26_DI_Staticmethod.Car.setsal"/>
+            <property name="arguments">
+                <list>
+                    <value>2018</value>
+                </list>
+        </property>
+    </bean>
+</beans>

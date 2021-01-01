@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+  <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+    <!--To activate the Required annotation Niche likhi class ka object banana padega-->
+    <bean id="m" class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>
+    <bean id="e" class="Le16_Dependencychecking2_Required_annotation.engine">
+        <property name="year" value="2018"/>
+    </bean>
+    <bean id="T" class="Le16_Dependencychecking2_Required_annotation.car" dependency-check="none"> <!--By Default none hi hote hai-->   
+<property name="name" value="Audi"/><!--This is  compulsary setter defenition here-->
+        <property name="year" ref="e"/><!--This is compulsary setter defenition here-->
+  <property name="name1" value="Audi"/><!--This is not compulsary setter defenition here-->
+        <property name="year1" ref="e"/><!--This is not compulsary setter defenition here-->
+    </bean>
+</beans>

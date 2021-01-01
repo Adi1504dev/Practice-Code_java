@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.-->
+
+    <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans >
+    <bean id="engine" class="les23_Autowiring_Autodetect.Engine" autowire-candidate="false">
+        <property name="year" value="2018"/>
+    </bean>
+        <bean id="engine1" class="les23_Autowiring_Autodetect.Engine"  >
+        <property name="year" value="2019"/>
+        </bean>
+        <bean id="t" class="les23_Autowiring_Autodetect.car" autowire="autodetect">
+     <constructor-arg value="audi"/><!--Isme aise value metion nai ker sakte
+bcoz jab default contructor hoga to parameterized nai chalega 
+isiliye vo ye value kisi main dal hi nai payegaa
+incase default constructor na ho bs setter aur paramerized ho to pehle default constructor chalega aur 
+setter nai chalega 
+aur agr default contructor hua to bs default contructor cahlega the vo setter chalega  apne aap jisse refference
+siya gaya hai
+
+-->
+            <property name="na" value="Maruti 800"></property><!--Default constructor hona chahiye-->
+        </bean>
+</beans>

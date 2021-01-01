@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+    <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+    <bean id="e" class="L9_di_map.engine">
+        <property name="model" value="2018"/>
+        
+    </bean>
+    <bean id="e1" class="L9_di_map.engine">
+        <property name="model" value="2017"/>
+        
+    </bean>
+    <bean id="e2" class="L9_di_map.engine">
+        <property name="model" value="2016"/>
+        
+    </bean>
+    <bean id="T" class="L9_di_map.car">
+        <property name="name" >
+            <map>
+                <entry key="1" value="Audi"/>
+                <entry key="2" value="LAmborgini"/>
+                <entry key="3" value="ZEn"/>
+            </map>
+        </property>
+        <property name="engine" >
+            <list>
+                <ref bean="e"/>
+                <ref bean="e1"/>
+                <ref bean="e1"/>   <!--Repetation possible as this is not Set(list) -->
+            </list>
+        </property>
+    </bean>
+</beans>
+

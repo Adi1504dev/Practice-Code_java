@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+    <bean id="e" class="les20_Autowiring.bytest.engine">
+     <property name="year" value="2018"/>
+    </bean>
+       <bean id="e1" class="les20_Autowiring.bytest.engine" autowire-candidate="false">
+           <property name="year" value="2019"/>
+    </bean>
+    <bean id="t" class="les20_Autowiring.bytest.car" autowire="byType">
+        <property name="name" value="Audi"/>
+    </bean>
+</beans>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+    <!--for truck-->
+    <bean id="e" class="less30_Look_up_method_Dependancy_Injection.engine">
+        <property name="name" value="New truck Engine"></property>
+    </bean>
+    <bean id="t" class="less30_Look_up_method_Dependancy_Injection.truck">
+        <lookup-method name="mytruckengine" bean="e"/>
+    </bean>
+     <!--for car-->
+     <!--See the interface has method that will return the engine object and this engine object will be passed to funtion by 
+spring itself-->
+    <bean id="e1" class="less30_Look_up_method_Dependancy_Injection.engine">
+        <property name="name" value="New car Engine"></property>
+    </bean>
+    <bean id="c" class="less30_Look_up_method_Dependancy_Injection.car">
+        <lookup-method name="mycarengine" bean="e1"/>
+    </bean>
+    <!--for bus-->
+    <bean id="e2" class="less30_Look_up_method_Dependancy_Injection.engine">
+        <property name="name" value="New bus Engine"></property>
+    </bean>
+    <bean id="b" class="less30_Look_up_method_Dependancy_Injection.Bus">
+        <lookup-method name="mybusengine" bean="e2"/>
+    </bean>
+</beans>

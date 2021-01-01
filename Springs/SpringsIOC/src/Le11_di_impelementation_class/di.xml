@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!--Schema Has been copied from net-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd">
+ <bean id="t" class="Le11_di_impelementation_class.pojo">
+     <property name="fruit">
+         <util:list list-class="java.util.Vector"><!--Important line-->
+             <value>Apple</value>
+             <value>Mango</value>
+             <value>Banana</value>
+         </util:list>
+     </property>
+     <property name="cricketer">
+         <util:set set-class="java.util.TreeSet"><!--Important line-->
+             <value>Dhoni</value>
+             <value>Sachin</value>
+             <value>Virat</value>
+         </util:set>
+     </property>
+     <property name="cc">
+         <util:map map-class="java.util.Hashtable">
+             <entry key="India" value="Delhi"/>
+             <entry key="Pakistan" value="Islamabad"/>
+             <entry key="America" value="Newyork"/>
+         </util:map>
+     </property>
+      
+     </bean>
+</beans>

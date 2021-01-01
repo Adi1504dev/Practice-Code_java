@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+  <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+    <bean id="e" class="Le12_Dependencychecking1_Setter_none.engine">
+        <property name="year" value="2018"/>
+    </bean>
+    <bean id="T" class="Le12_Dependencychecking1_Setter_none.car" dependency-check="none"> <!--By Default none hi hote hai-->   
+<property name="name" value="Audi"/><!--This is not compulsary setter defenition here-->
+        <property name="year" ref="e"/><!--This is not compulsary setter defenition here-->
+    </bean>
+</beans>
